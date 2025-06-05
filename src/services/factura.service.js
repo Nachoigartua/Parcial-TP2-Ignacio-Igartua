@@ -1,4 +1,4 @@
-import validation from "../utils/Validation.js";
+import validation from "../utils/validation.js";
 import Factory from "../models/Factory.js";
 
 class FacturaService {
