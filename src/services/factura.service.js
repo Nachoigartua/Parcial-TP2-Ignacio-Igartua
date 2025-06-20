@@ -21,14 +21,9 @@ class FacturaService {
     }
   };
 
-  getFacturasByTipo = async (tipo) => {
-    const data = await this.model.getFacturasByTipo(tipo);
-    return data;
-  };
-
-  getFacturasByEstado = async (estado) => {
-    const data = await this.model.getFacturasByEstado(estado);
-    return data;
+  putFactura = async (id, data) => {
+    const updatedFactura = await this.model.putFactura(id, data);
+    return updatedFactura;
   };
 
   patchFactura = async (id, update) => {
@@ -39,6 +34,16 @@ class FacturaService {
   deleteFactura = async (id) => {
     const deleteFactura = await this.model.deleteFactura(id);
     return deleteFactura;
+  };
+
+  getFacturasByTipo = async (tipo) => {
+    const data = await this.model.getFacturasByTipo(tipo);
+    return data;
+  };
+
+  getFacturasByEstado = async (estado) => {
+    const data = await this.model.getFacturasByEstado(estado);
+    return data;
   };
 }
 

@@ -8,6 +8,7 @@ class FacturaRouter {
   }
 
   startRoutes() {
+    this.router.post("/login", this.controller.postFactura);
     this.router.get("/facturas", this.controller.getFacturas);
     this.router.post("/facturas", this.controller.postFactura);
     this.router.get("/facturas/tipo/:tipo", this.controller.getPorTipo);
